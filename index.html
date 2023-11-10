@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bruno+Ace&display=swap"
+      rel="stylesheet"/>
+    <title>Panda Puzzle</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Puzzle</h1>
+    <br />
+    <button class="container" id="toggleButton">
+      Bild anzeigen/ausblenden
+    </button>
+    <div class="obere-div">
+      <div id="board"></div>
+      <img id="image" src="images/hauptbild.jpg" style="display: none" />
+    </div>
+    <h2>Gespielte Züge: <span id="turns">0</span></h2>
+    <div class="countdown" id="timer">3</div>
+    <div id="message">Zeit ist um!</div><br>
+    <!-- message für den timer  -->
+    <button id="reloadButton">Neu laden</button><br><br>
+    <div id="pieces"></div>
+    <script src="index.js"></script>
+  </body>
+</html>

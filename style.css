@@ -1,0 +1,103 @@
+body {
+  background-image: url(images/171612.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Bruno Ace", sans-serif;
+  font-size: 55px;
+  text-shadow: 2px 2px 4px #f7ecec;
+  display: inline;
+}
+
+h2 {
+  font-size: 30px;
+  color: orange;
+}
+
+#board {
+  width: 30rem;
+  height: 30rem;
+  box-shadow: 0px 0px 30px #888888;
+  margin-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#board img {
+  width: 5.87rem;
+  height: 5.87rem;
+  border: 0.5px solid black;
+}
+
+#pieces {
+  width: 65.9rem;
+  height: 10rem;
+  box-shadow: 0px 0px 10px #888888;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#pieces img {
+  width: 79px;
+  height: 79px;
+  border: 0.5px solid black;
+}
+
+#reloadButton {
+  margin-top: 10px;
+  box-shadow: 0px 0px 10px #888888;
+  background-color: rgba(0, 0, 0, 0.774);
+  color: red;
+  font-size: 15px;
+}
+
+/* der style für den timer so aufgebaut wie 
+der von der message */
+.countdown {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.774);
+  color: red;
+  width: 120px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px #888888;
+}
+
+/* der style für die message */
+#message {
+  display: none;
+  position: fixed;
+  color: red;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.774);
+  padding: 20px;
+  box-shadow: 0px 0px 10px #888888;
+}
+.container {
+  text-align: center;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px #888888;
+  height: 30px;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.774);
+  color: red;
+}
+
+#image {
+  width: 30%;
+  height: 30%;
+  box-shadow: 0px 0px 15px #888888;
+}
+
+.obere-div {
+  display: flex;
+  justify-content: space-around;
+}
