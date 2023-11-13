@@ -101,3 +101,44 @@ der von der message */
   display: flex;
   justify-content: space-around;
 }
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  #reloadButton {
+    font-size: 0.8rem;
+  }
+
+  #timer {
+    font-size: 1rem;
+  }
+  #toggleButton {
+    display: none;
+  }
+  #board {
+    width: 15rem;
+    height: 15rem;
+  }
+  #board img {
+    width: 2.86rem;
+    height: 2.86rem;
+  }
+  #pieces {
+    width: 20rem;
+    height: 7rem;
+  }
+
+  #pieces img {
+    width: 33.5px;
+    height: 33.5px;
+  }
+  #imsge {
+    display: none;
+  }
+}
