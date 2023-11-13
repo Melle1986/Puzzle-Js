@@ -23,7 +23,7 @@ function moveEnter(e) {
   e.preventDefault();
 }
 
-function moveLeave() {}
+function moveLeave() { }
 
 function moveDrop() {
   otherTile = this;
@@ -130,11 +130,46 @@ function startTimer(duration) {
       document.getElementById("message").style.display = "block";
 
       // Entferne die Eventlistener für das Ziehen der Bilder
+      removeDragEventListeners();
+      // in die function timer mit einbauen damit sound spielt wenn timer abgelaufen ist
+      document.getElementById("timerSound").play("bing.mp3");
     }
   }, 1000);
 }
 startTimer(180);
-removeDragEventListeners();
+
+
+
+// // Let komplett einsetzen damit der sound abgespielt wird 
+// let timerSound = document.getElementById("timerSound");
+
+function playSound() {
+  timerSound.currentTime = 0;
+  timerSound.play("bing.mp3");
+  
+  // Event-Listener entfernen, um nur einmal abzuspielen
+  timerSound.removeEventListener("ended", playSound);
+}
+
+
+
+
+
+
+// Die function wird verwendet um den sound im hintergrund ab zu spielen 
+
+function playAudioOnLoad() {
+  let audio = document.getElementById('startSeite');
+  if (audio) {
+    audio.play("junle.mp3");
+  } else {
+    console.error("Audio-Element mit der ID 'startSeite' nicht gefunden.");
+  }
+}
+
+// Event-Listener hinzufügen, der die Funktion beim Laden der Seite aufruft
+window.addEventListener('load', playAudioOnLoad);
+
 
 function removeDragEventListeners() {
   const tiles = document.querySelectorAll("img");
