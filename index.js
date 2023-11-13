@@ -166,3 +166,13 @@ function toggleImage() {
 
 toggleButton.addEventListener("mousedown", toggleImage);
 toggleButton.addEventListener("mouseup", toggleImage);
+
+function allImagesPlacedCorrectly() {
+  const imageElements = document.querySelectorAll("img");
+  for (const image of imageElements) {
+    if (!image.style.border.includes("green")) {
+      return false; // Es gibt mindestens ein Bild, das nicht korrekt platziert wurde
+    }
+  }
+  return true; // Alle Bilder sind korrekt platziert
+}
