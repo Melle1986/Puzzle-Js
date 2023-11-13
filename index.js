@@ -128,16 +128,15 @@ function startTimer(duration) {
       clearInterval(interval);
       timerExpired = true; // Timer ist abgelaufen
       document.getElementById("message").style.display = "block";
-
-      // Entferne die Eventlistener für das Ziehen der Bilder
-      removeDragEventListeners();
+// Entferne die Eventlistener für das Ziehen der Bilder
+     
       // in die function timer mit einbauen damit sound spielt wenn timer abgelaufen ist
       document.getElementById("timerSound").play("bing.mp3");
     }
   }, 1000);
 }
 startTimer(180);
-
+removeDragEventListeners();
 
 
 // // Let komplett einsetzen damit der sound abgespielt wird 
@@ -151,17 +150,12 @@ function playSound() {
   timerSound.removeEventListener("ended", playSound);
 }
 
-
-
-
-
-
 // Die function wird verwendet um den sound im hintergrund ab zu spielen 
 
 function playAudioOnLoad() {
   let audio = document.getElementById('startSeite');
   if (audio) {
-    audio.play("junle.mp3");
+    audio.play("natur.mp3");
   } else {
     console.error("Audio-Element mit der ID 'startSeite' nicht gefunden.");
   }
@@ -202,12 +196,12 @@ function toggleImage() {
 toggleButton.addEventListener("mousedown", toggleImage);
 toggleButton.addEventListener("mouseup", toggleImage);
 
-function allImagesPlacedCorrectly() {
-  const imageElements = document.querySelectorAll("img");
-  for (const image of imageElements) {
-    if (!image.style.border.includes("green")) {
-      return false; // Es gibt mindestens ein Bild, das nicht korrekt platziert wurde
-    }
-  }
-  return true; // Alle Bilder sind korrekt platziert
-}
+// function allImagesPlacedCorrectly() {
+//   const imageElements = document.querySelectorAll("img");
+//   for (const image of imageElements) {
+//     if (!image.style.border.includes("green")) {
+//       return false; // Es gibt mindestens ein Bild, das nicht korrekt platziert wurde
+//     }
+//   }
+//   return true; // Alle Bilder sind korrekt platziert
+// }
